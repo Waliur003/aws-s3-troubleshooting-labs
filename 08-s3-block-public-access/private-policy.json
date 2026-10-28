@@ -1,0 +1,14 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowLabAccountRead",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::418272769771:root"
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::cloud-lab08-418272769771/test.txt"
+    }
+  ]
+}
