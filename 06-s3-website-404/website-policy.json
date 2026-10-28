@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Lab06PublicIndexRead",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": [
+        "arn:aws:s3:::cloud-lab06-418272769771/index.html",
+        "arn:aws:s3:::cloud-lab06-418272769771/Index.html"
+      ]
+    }
+  ]
+}
