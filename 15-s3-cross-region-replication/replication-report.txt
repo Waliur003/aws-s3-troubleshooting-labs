@@ -1,0 +1,6 @@
+Cloud Engineering Lab 15
+
+Application: Disaster Recovery
+Replication: Cross-Region
+Status: Remediation Successful
+Version: 2
