@@ -1,0 +1,23 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "ReadEncryptedReport",
+      "Effect": "Allow",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::cloud-lab12-418272769771/reports/encrypted-report.txt"
+    },
+    {
+      "Sid": "DecryptReportViaS3",
+      "Effect": "Allow",
+      "Action": "kms:Decrypt",
+      "Resource": "arn:aws:kms:us-east-1:418272769771:key/7d87e8bf-05a0-4893-91df-4b9d49280b12",
+      "Condition": {
+        "StringEquals": {
+          "kms:ViaService": "s3.us-east-1.amazonaws.com",
+          "kms:CallerAccount": "418272769771"
+        }
+      }
+    }
+  ]
+}
