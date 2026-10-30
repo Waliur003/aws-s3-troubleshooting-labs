@@ -1,0 +1,5 @@
+Cloud Engineering Lab 14
+
+Event Notification Recovery Test
+Expected Result: SQS event delivered
+Status: New Object Upload

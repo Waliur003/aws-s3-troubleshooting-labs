@@ -1,0 +1,45 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowS3EventNotifications",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "sqs:SendMessage",
+      "Resource": "arn:aws:sqs:us-east-1:418272769771:cloud-lab14-s3-events-418272769771",
+      "Condition": {
+        "ArnEquals": {
+          "aws:SourceArn": "arn:aws:s3:::cloud-lab14-418272769771"
+        },
+        "StringEquals": {
+          "aws:SourceAccount": "418272769771"
+        }
+      }
+    }
+  ]
+}
+EOFcat > sqs-queue-policy.json <<EOF
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowS3EventNotifications",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "sqs:SendMessage",
+      "Resource": "arn:aws:sqs:us-east-1:418272769771:cloud-lab14-s3-events-418272769771",
+      "Condition": {
+        "ArnEquals": {
+          "aws:SourceArn": "arn:aws:s3:::cloud-lab14-418272769771"
+        },
+        "StringEquals": {
+          "aws:SourceAccount": "418272769771"
+        }
+      }
+    }
+  ]
+}

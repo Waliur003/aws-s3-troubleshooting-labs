@@ -1,0 +1,5 @@
+Cloud Engineering Lab 14
+
+Application: File Processing
+Event: ObjectCreated
+Expected SQS Notification: Yes

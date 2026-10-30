@@ -1,0 +1,21 @@
+{
+  "QueueConfigurations": [
+    {
+      "Id": "Lab14ObjectCreated",
+      "QueueArn": "arn:aws:sqs:us-east-1:418272769771:cloud-lab14-s3-events-418272769771",
+      "Events": [
+        "s3:ObjectCreated:*"
+      ],
+      "Filter": {
+        "Key": {
+          "FilterRules": [
+            {
+              "Name": "prefix",
+              "Value": "upload/"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
