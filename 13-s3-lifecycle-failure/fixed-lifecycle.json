@@ -1,0 +1,14 @@
+{
+  "Rules": [
+    {
+      "ID": "ExpireApplicationLogsAfter30Days",
+      "Status": "Enabled",
+      "Filter": {
+        "Prefix": "logs/"
+      },
+      "Expiration": {
+        "Days": 30
+      }
+    }
+  ]
+}
